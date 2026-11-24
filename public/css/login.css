@@ -1,0 +1,574 @@
+/* ===================================================================
+   LOGIN VIEW STYLES (UNIQUE TO /views/login.php)
+   Shared tokens, resets, icons, and theme toggle live in tokens.css & globals.css
+   =================================================================== */
+
+@media (min-width: 861px) {
+  html,
+  body {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+  }
+}
+
+.logowanie-dark {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(8px, 1.6vh, 16px);
+  position: relative;
+  background-color: var(--bg-page);
+  overflow: hidden;
+}
+
+.logowanie-dark .portal-mieszkaca {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  max-height: 100%;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  max-width: 926px;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================================
+   LEFT COLUMN: BRANDING, DORMS & THEME SWITCHER
+   ======================================================== */
+.logowanie-dark .uczelnia-i-domy {
+  display: flex;
+  flex-direction: column;
+  width: 386px;
+  flex: 0 0 386px;
+  max-width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(10px, 1.8vh, 24px);
+  padding: clamp(16px, 2.5vh, 32px);
+  background: linear-gradient(180deg, rgba(11, 37, 69, 1) 0%, rgba(0, 16, 38, 1) 100%);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.logowanie-dark .uczelnia-i-domy::-webkit-scrollbar { display: none; }
+
+.logowanie-dark .politechnika {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.logowanie-dark .symbol-uczelni {
+  width: 44px;
+  height: 48px;
+  background-color: var(--colour-palette-dark-mode-secondary-surface-duplicate);
+}
+
+.logowanie-dark .uczelnia { font-size: 18px; color: #f3f6fc; }
+.logowanie-dark .portal { font-size: 12px; color: #b1c7f0; letter-spacing: 0.07px; }
+
+.logowanie-dark .wprowadzenie-do {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-top: clamp(0px, 1vh, 8px);
+  width: 100%;
+}
+
+.logowanie-dark .semestr {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  background-color: var(--colour-palette-dark-mode-secondary-surface-duplicate);
+  border-radius: 999px;
+}
+
+.logowanie-dark .znacznik-semestru {
+  width: 8px;
+  height: 8px;
+  background-color: var(--colour-palette-dark-mode-coral-maker-duplicate);
+  border-radius: 999px;
+}
+
+.logowanie-dark .okres { color: #b1c7f0; font-size: 11px; line-height: 14px; }
+
+.logowanie-dark .powitanie {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  color: #f3f6fc;
+  font-size: clamp(18px, 2.2vh, 23px);
+  letter-spacing: -0.21px;
+  line-height: clamp(26px, 3.2vh, 36px);
+}
+
+.logowanie-dark .tre {
+  margin: 0;
+  color: #b1c7f0;
+  font-size: clamp(12.5px, 1.4vh, 14px);
+  line-height: clamp(18px, 2vh, 22.4px);
+}
+
+.logowanie-dark .domy-studenckie-w {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 0.8vh, 8px);
+  padding-top: clamp(0px, 0.8vh, 8px);
+  width: 100%;
+}
+
+.logowanie-dark .kampus {
+  margin: 0;
+  font-weight: 600;
+  color: #91a8cc;
+  font-size: 11px;
+  letter-spacing: 0.06px;
+  line-height: 14px;
+}
+
+.logowanie-dark .dom-studencki {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: clamp(6px, 1vh, 12px);
+  width: 100%;
+  background-color: var(--colour-palette-dark-mode-secondary-surface-duplicate);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.logowanie-dark .dom-studencki:hover {
+  background-color: var(--colour-palette-dark-mode-action-surface-duplicate);
+  transform: translateY(-1px);
+}
+
+.logowanie-dark .dom-naglowek {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logowanie-dark .nazwa-akademika {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  color: #f3f6fc;
+  font-size: clamp(13px, 1.4vh, 15.2px);
+  line-height: clamp(18px, 2vh, 22.8px);
+}
+
+.logowanie-dark .etykieta-statusu {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: var(--colour-palette-dark-mode-secondary-surface-duplicate);
+  border-radius: 999px;
+}
+
+.logowanie-dark .status {
+  font-weight: 600;
+  color: #b1c7f0;
+  font-size: 11px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.logowanie-dark .dom-studencki .text-wrapper {
+  margin: 0;
+  color: #b8c3d4;
+  font-size: clamp(11.5px, 1.2vh, 13px);
+  line-height: clamp(16px, 1.8vh, 20.8px);
+}
+
+.logowanie-dark .przelacznik-motywu {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ========================================================
+   RIGHT COLUMN: LOGIN FORM & RECRUITMENT / CONTACT
+   ======================================================== */
+.logowanie-dark .logowanie-i-pomoc {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  flex: 1 1 540px;
+  max-width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  padding: clamp(16px, 2.8vh, 32px);
+  background-color: var(--bg-card);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.logowanie-dark .logowanie-i-pomoc::-webkit-scrollbar { display: none; }
+
+.logowanie-dark .metody-logowania {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vh, 24px);
+  width: 100%;
+}
+
+.logowanie-dark .nagwek-logowania { display: flex; flex-direction: column; gap: 3px; width: 100%; }
+.logowanie-dark .tytu-i-wersja { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+
+.logowanie-dark .text-wrapper-2 {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 20px;
+}
+
+.logowanie-dark .nagwek-logowania .etykieta-statusu {
+  background-color: var(--bg-soft);
+}
+
+.logowanie-dark .nagwek-logowania .status {
+  color: var(--text-secondary);
+}
+
+.logowanie-dark .nagwek-logowania .text-wrapper {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 20.8px;
+}
+
+.logowanie-dark .logowanie-przez-SSO { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+
+.logowanie-dark .konto-microsoft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: clamp(8px, 1.2vh, 12px) 16px;
+  width: 100%;
+  background-color: var(--accent-navy);
+  border-radius: 8px;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.logowanie-dark .konto-microsoft:hover { background-color: #163a66; }
+
+.logowanie-dark .microsoft { position: relative; width: 20px; height: 20px; flex-shrink: 0; }
+.logowanie-dark .img { top: 1px; left: 1px; position: absolute; width: 7px; height: 7px; }
+.logowanie-dark .microsoft-2 { top: 1px; left: 9px; position: absolute; width: 7px; height: 7px; }
+.logowanie-dark .microsoft-3 { top: 9px; left: 1px; position: absolute; width: 7px; height: 7px; }
+.logowanie-dark .microsoft-4 { top: 9px; left: 9px; position: absolute; width: 7px; height: 7px; }
+
+.logowanie-dark .konto-uczelniane { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1; }
+.logowanie-dark .konto-uczelniane .dostawca { font-weight: 600; color: #f3f6fc; font-size: 14px; }
+.logowanie-dark .konto-uczelniane .domena-uczelniana { color: #b1c7f0; font-size: 12px; }
+.logowanie-dark .ikona-2 { width: 12px; height: 12px; color: #b1c7f0; }
+
+.logowanie-dark .wze-krajowy {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 16px;
+  width: 100%;
+  background-color: var(--bg-soft);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.logowanie-dark .wze-krajowy:hover { background-color: var(--bg-secondary); }
+
+.logowanie-dark .login-gov {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-crimson);
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.logowanie-dark .polska { font-weight: 700; color: var(--bg-deep); font-size: 10px; }
+
+[data-theme="light"] .logowanie-dark .polska,
+body.light-mode .logowanie-dark .polska { color: #ffffff; }
+
+.logowanie-dark .metoda-krajowa { font-weight: 600; color: var(--text-primary); font-size: 12px; }
+
+.logowanie-dark .alternatywna-metoda { display: flex; align-items: center; gap: 12px; width: 100%; }
+.logowanie-dark .separator { flex: 1; height: 1px; background-color: var(--border-subtle); }
+.logowanie-dark .dane-kwaterunkowe { font-weight: 600; color: var(--text-secondary); font-size: 9px; white-space: nowrap; }
+
+.logowanie-dark .dane-kwaterunkowe-2 { display: flex; flex-direction: column; gap: clamp(8px, 1.4vh, 14px); width: 100%; }
+.logowanie-dark .pole-logowania { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+.logowanie-dark .etykieta-wiersz { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+
+.logowanie-dark .tre-2 { font-weight: 600; color: var(--text-primary); font-size: 12px; line-height: 19.2px; }
+.logowanie-dark .tre-3 { color: var(--text-secondary); font-size: 11px; white-space: nowrap; }
+
+.logowanie-dark .pole-danych {
+  display: flex;
+  height: clamp(38px, 4.4vh, 44px);
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  width: 100%;
+  background-color: var(--bg-soft);
+  border-radius: 8px;
+}
+
+.logowanie-dark .pole-danych .ikona-mask { color: var(--text-muted); }
+
+.logowanie-dark .p {
+  flex: 1;
+  color: var(--text-primary);
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logowanie-dark .tre-4 {
+  flex: 1;
+  color: var(--text-muted);
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logowanie-dark .tre-5 { font-weight: 600; color: var(--text-light-blue); font-size: 11px; white-space: nowrap; }
+.logowanie-dark .tre-5:hover { text-decoration: underline; }
+.logowanie-dark .ikona-7 { cursor: pointer; }
+.logowanie-dark .tre-5-desktop { display: block; }
+.logowanie-dark .odzyskaj-haso { display: none; }
+
+.logowanie-dark .zapamitaj-urzdzenie {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logowanie-dark .pole-wyboru {
+  position: relative;
+  width: 13px;
+  height: 13px;
+  background-color: var(--bg-page);
+  border-radius: 2.5px;
+  border: 1px solid var(--text-muted);
+  flex-shrink: 0;
+}
+
+.logowanie-dark .pole-wyboru-input:checked + .pole-wyboru {
+  background-color: var(--text-light-blue);
+  border-color: var(--text-light-blue);
+}
+
+.logowanie-dark .pole-wyboru-input:checked + .pole-wyboru::after {
+  content: '';
+  position: absolute;
+  left: 3.5px;
+  top: 1px;
+  width: 3px;
+  height: 6px;
+  border: solid var(--bg-card);
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+.logowanie-dark .tre-6 { flex: 1; color: var(--text-primary); font-size: 13px; }
+
+.logowanie-dark .przycisk {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  width: 100%;
+  background-color: var(--bg-deep);
+  border-radius: 8px;
+  color: #ffffff;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.logowanie-dark .przycisk:hover { background-color: var(--accent-navy); }
+.logowanie-dark .przycisk:active { transform: scale(0.99); }
+
+.logowanie-dark .etykieta { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; font-size: 14px; }
+
+.logowanie-dark .certyfikat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: clamp(8px, 1.2vh, 12px) 10px;
+  width: 100%;
+  background-color: var(--bg-soft);
+  border-radius: 8px;
+}
+
+.logowanie-dark .ikona-9 { color: var(--accent-crimson); }
+.logowanie-dark .zabezpieczenia { margin: 0; flex: 1; color: var(--text-secondary); font-size: 13px; line-height: 16.2px; }
+
+.logowanie-dark .rekrutacja-i-kontakt { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.logowanie-dark .tre-7 { margin: 0; color: var(--text-secondary); font-size: 12px; text-align: center; }
+.logowanie-dark .tre-8 { font-weight: 600; color: var(--text-light-blue); font-size: 12px; text-align: center; }
+.logowanie-dark .tre-8:hover { text-decoration: underline; }
+.logowanie-dark .separator-2 { width: 100%; height: 1px; border: none; margin: 0; background-color: var(--border-subtle); }
+
+.logowanie-dark .dyur-i-portiernia { display: flex; align-items: center; justify-content: center; gap: 12px; padding-top: 4px; width: 100%; }
+
+.logowanie-dark .kontakt-telefoniczny {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-soft);
+  border-radius: 999px;
+  color: var(--text-light-blue);
+  flex-shrink: 0;
+}
+
+.logowanie-dark .portiernia { display: flex; flex-direction: column; width: 196px; gap: 3px; }
+.logowanie-dark .tre-9 { font-weight: 600; color: var(--text-secondary); font-size: 11px; }
+.logowanie-dark .tre-10 { font-weight: 600; color: var(--text-light-blue); font-size: 14px; }
+.logowanie-dark .pomoc-dyspozytora { display: inline-flex; flex-direction: column; gap: 3px; }
+.logowanie-dark .tre-11 { color: var(--text-secondary); font-size: 10px; white-space: nowrap; }
+.logowanie-dark .tre-12 { font-weight: 600; color: var(--text-light-blue); font-size: 11px; white-space: nowrap; }
+.obszar-gestw { display: none; }
+
+/* ========================================================
+   MOBILE VIEW (<= 860px)
+   ======================================================== */
+@media (max-width: 860px) {
+  html,
+  body {
+    height: auto !important;
+    overflow-y: auto !important;
+  }
+
+  .logowanie-dark {
+    padding: 0;
+    min-height: 100dvh;
+    height: auto;
+    max-height: none;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-color: var(--bg-card);
+    overflow-y: visible;
+  }
+
+  .logowanie-dark .portal-mieszkaca {
+    flex-direction: column;
+    min-height: 100dvh;
+    height: auto;
+    max-height: none;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .logowanie-dark .uczelnia-i-domy {
+    width: 100%;
+    flex: 0 0 auto;
+    height: auto;
+    padding: 24px 24px 28px;
+    gap: 20px;
+    overflow-y: visible;
+  }
+
+  .logowanie-dark .symbol-uczelni { width: 40px; height: 44px; }
+  .logowanie-dark .uczelnia { font-size: 17px; }
+  .logowanie-dark .portal { font-size: 10px; }
+  .logowanie-dark .wprowadzenie-do { padding: 0; }
+  .logowanie-dark .semestr { padding: 0; background-color: transparent; }
+  .logowanie-dark .powitanie { font-size: 25px; line-height: 32px; }
+  .logowanie-dark .tre,
+  .logowanie-dark .domy-studenckie-w { display: none !important; }
+
+  .logowanie-dark .przelacznik-motywu {
+    position: fixed;
+    bottom: 20px;
+    left: 16px;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .logowanie-dark .logowanie-i-pomoc {
+    width: 100%;
+    flex: 1 1 auto;
+    height: auto;
+    padding: 24px 20px 32px;
+    gap: 24px;
+    justify-content: flex-start;
+    overflow-y: visible;
+  }
+
+  .logowanie-dark .tytu-i-wersja { gap: 12px; }
+  .logowanie-dark .text-wrapper-2 { flex: 1; line-height: 27px; }
+  .logowanie-dark .konto-microsoft { min-height: 64px; }
+  .logowanie-dark .konto-uczelniane { align-items: flex-start; text-align: left; }
+  .logowanie-dark .wze-krajowy { min-height: 60px; justify-content: flex-start; }
+  .logowanie-dark .metoda-krajowa { flex: 1; font-size: 13px; text-align: left; }
+  .logowanie-dark .tre-5-desktop { display: none !important; }
+  .logowanie-dark .odzyskaj-haso { display: flex !important; justify-content: flex-end; width: 100%; padding-top: 4px; }
+  .logowanie-dark .pole-danych { height: 52px; padding: 0 16px; }
+  .logowanie-dark .przycisk { height: 56px; }
+  .logowanie-dark .zabezpieczenia { font-size: 11px; }
+  .logowanie-dark .rekrutacja-i-kontakt { gap: 16px; margin-top: 8px; }
+  .logowanie-dark .dyur-i-portiernia { justify-content: space-between; }
+  .logowanie-dark .portiernia { flex: 1; width: auto; }
+
+  .logowanie-dark .obszar-gestw {
+    display: flex;
+    height: 24px;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .logowanie-dark .wskanik-gestw {
+    width: 134px;
+    height: 5px;
+    border-radius: 100px;
+    background-color: var(--text-secondary);
+  }
+}
+
+@media (max-width: 360px) {
+  .logowanie-dark .uczelnia-i-domy,
+  .logowanie-dark .logowanie-i-pomoc {
+    padding: 16px 12px;
+  }
+  .logowanie-dark .text-wrapper-2 { font-size: 18px; }
+  .logowanie-dark .powitanie { font-size: 21px; line-height: 28px; }
+}
