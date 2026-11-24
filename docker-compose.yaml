@@ -33,6 +33,9 @@ services:
       dockerfile: docker/php/Dockerfile
     volumes:
       - .:/app
+    # Run composer install every time the container starts so vendor/ is always present,
+    # even though the bind mount overwrites the directory built into the image.
+    command: sh -c "composer install --no-dev --optimize-autoloader && php-fpm"
     networks:
       - pg-network
   

@@ -10,26 +10,25 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 $routing = new Routing();
 
-// Existing application routes
+// TU BĘDZIEMY DEFINIOWAĆ WSZYSTKIE TRASY WYSTĘPUJĄCE W NASZYM PROJEKCIE
 $routing->get('/projects', ProjectController::class, 'index');
 $routing->get('/projects/{id}', ProjectController::class, 'show');
 $routing->get('/', DefaultController::class, 'index');
 
 $routeFound = $routing->dispatch(
     $_SERVER['REQUEST_METHOD'],
-    $_SERVER['REQUEST_URI']
+    $_SERVER['REQUEST_URI'],
 );
 
 if (!$routeFound) {
-    // Fallback to static view handling for dashboard and login pages
+    // Serve static views for dashboard and login
     $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
-    $path = rtrim($path, '/');
+    $path = rtrim($path, '/') ?: '/';
 
     switch ($path) {
         case '/login':
             require __DIR__ . '/views/login.php';
             break;
-        case '/':
         case '/main':
             require __DIR__ . '/views/main.php';
             break;
