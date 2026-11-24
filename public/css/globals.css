@@ -1,0 +1,199 @@
+/* ===================================================================
+   GLOBAL RESETS, TYPOGRAPHY, SHARED ICONS & THEME TOGGLE
+   =================================================================== */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+*, *::before, *::after {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Font-family aliases for legacy class references */
+@font-face {
+  font-family: "Plus Jakarta Sans-Bold";
+  src: local("Plus Jakarta Sans Bold"), local("Plus Jakarta Sans-Bold");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: local("Inter Regular"), local("Inter-Regular");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter-Medium";
+  src: local("Inter Medium"), local("Inter-Medium");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: local("Inter SemiBold"), local("Inter-SemiBold");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: local("Inter Bold"), local("Inter-Bold");
+  font-weight: 700;
+}
+
+/* Shared Mask Icons */
+.ikona-mask {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+.ikona-dorm { width: 20px; height: 20px; -webkit-mask-image: var(--mask-dorm); mask-image: var(--mask-dorm); }
+.ikona-house { width: 16px; height: 14px; -webkit-mask-image: var(--mask-house); mask-image: var(--mask-house); }
+.ikona-calendar { width: 16px; height: 18px; -webkit-mask-image: var(--mask-calendar); mask-image: var(--mask-calendar); }
+.ikona-search { width: 15px; height: 15px; -webkit-mask-image: var(--mask-search); mask-image: var(--mask-search); }
+.ikona-bell { width: 18px; height: 18px; -webkit-mask-image: var(--mask-bell); mask-image: var(--mask-bell); }
+.ikona-user { width: 16px; height: 16px; -webkit-mask-image: var(--mask-user); mask-image: var(--mask-user); }
+.ikona-key { width: 16px; height: 16px; -webkit-mask-image: var(--mask-key); mask-image: var(--mask-key); }
+.ikona-check { width: 17px; height: 17px; -webkit-mask-image: var(--mask-check); mask-image: var(--mask-check); }
+.ikona-broom { width: 16px; height: 18px; -webkit-mask-image: var(--mask-broom); mask-image: var(--mask-broom); }
+.ikona-plus { width: 12px; height: 12px; -webkit-mask-image: var(--mask-plus); mask-image: var(--mask-plus); }
+.ikona-arrow-right { width: 12px; height: 12px; -webkit-mask-image: var(--mask-arrow-right); mask-image: var(--mask-arrow-right); }
+.ikona-chevron-right { width: 12px; height: 12px; -webkit-mask-image: var(--mask-chevron-right); mask-image: var(--mask-chevron-right); }
+.ikona-dropdown { width: 9px; height: 6px; -webkit-mask-image: var(--mask-dropdown); mask-image: var(--mask-dropdown); }
+.ikona-telephone-ring { width: 15px; height: 15px; -webkit-mask-image: var(--mask-telephone-ring); mask-image: var(--mask-telephone-ring); }
+.ikona-announcement { width: 18px; height: 18px; -webkit-mask-image: var(--mask-announcement); mask-image: var(--mask-announcement); }
+.ikona-document { width: 15px; height: 18px; -webkit-mask-image: var(--mask-document); mask-image: var(--mask-document); }
+.ikona-wallet { width: 17px; height: 16px; -webkit-mask-image: var(--mask-wallet); mask-image: var(--mask-wallet); }
+.ikona-menu { width: 15px; height: 13px; -webkit-mask-image: var(--mask-menu); mask-image: var(--mask-menu); }
+.ikona-washing-machine { width: 14px; height: 16px; -webkit-mask-image: var(--mask-washing-machine); mask-image: var(--mask-washing-machine); }
+.ikona-dice { width: 15px; height: 15px; -webkit-mask-image: var(--mask-dice); mask-image: var(--mask-dice); }
+.ikona-user-plus { width: 15px; height: 15px; -webkit-mask-image: var(--mask-user-plus); mask-image: var(--mask-user-plus); }
+.ikona-id { width: 17px; height: 17px; -webkit-mask-image: var(--mask-id); mask-image: var(--mask-id); }
+.ikona-lock { width: 14px; height: 18px; -webkit-mask-image: var(--mask-lock); mask-image: var(--mask-lock); }
+.ikona-eye { width: 19px; height: 13px; -webkit-mask-image: var(--mask-eye); mask-image: var(--mask-eye); }
+.ikona-arrow-bracket { width: 15px; height: 15px; -webkit-mask-image: var(--mask-arrow-bracket); mask-image: var(--mask-arrow-bracket); }
+.ikona-shield { width: 12px; height: 15px; -webkit-mask-image: var(--mask-shield); mask-image: var(--mask-shield); }
+
+/* Shared Theme Toggle Button */
+.przelacznik-motywu {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 13px;
+  background-color: var(--bg-secondary);
+  border-radius: 999px;
+  color: var(--text-light-blue);
+  font-weight: 600;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.przelacznik-motywu:hover {
+  background-color: var(--bg-action);
+  transform: translateY(-1px);
+}
+
+.przelacznik-motywu:active {
+  transform: scale(0.97);
+}
+
+.ikona-slonce,
+.ikona-ksiezyc {
+  width: 15px;
+  height: 15px;
+}
+
+.ikona-slonce {
+  -webkit-mask-image: var(--mask-slonce);
+  mask-image: var(--mask-slonce);
+  display: none;
+}
+
+.ikona-ksiezyc {
+  -webkit-mask-image: var(--mask-ksiezyc);
+  mask-image: var(--mask-ksiezyc);
+  display: inline-block;
+}
+
+[data-theme="light"] .ikona-slonce,
+body.light-mode .ikona-slonce {
+  display: inline-block;
+}
+
+[data-theme="light"] .ikona-ksiezyc,
+body.light-mode .ikona-ksiezyc {
+  display: none;
+}
+
+/* Shared Brand Emblem & Typography */
+.symbol-uczelni {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #b1c7f0;
+  flex-shrink: 0;
+}
+
+.nazwa-uczelni {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.uczelnia {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  color: #f3f6fc;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.portal {
+  font-weight: 600;
+  color: #b1c7f0;
+  font-size: 9px;
+  letter-spacing: 0.6px;
+}

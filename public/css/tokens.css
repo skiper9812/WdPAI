@@ -1,0 +1,166 @@
+/* ===================================================================
+   DECLARED COLOUR PALETTE & SEMANTIC THEME TOKENS
+   =================================================================== */
+
+:root {
+  /* Light Mode Palette */
+  --colour-palette-light-mode-primary-navy: rgba(11, 37, 69, 1);
+  --colour-palette-light-mode-deep-navy: rgba(0, 16, 38, 1);
+  --colour-palette-light-mode-crimson: rgba(182, 32, 54, 1);
+  --colour-palette-light-mode-light-blue: rgba(177, 199, 240, 1);
+  --colour-palette-light-mode-page-background: rgba(248, 249, 255, 1);
+  --colour-palette-light-mode-card-surface: rgba(255, 255, 255, 1);
+  --colour-palette-light-mode-soft-surface: rgba(239, 244, 255, 1);
+  --colour-palette-light-mode-secondary-surface: rgba(230, 238, 255, 1);
+  --colour-palette-light-mode-action-surface: rgba(220, 233, 255, 1);
+  --colour-palette-light-mode-primary-text: rgba(13, 28, 46, 1);
+  --colour-palette-light-mode-secondary-text: rgba(68, 71, 78, 1);
+  --colour-palette-light-mode-muted-blue: rgba(119, 141, 178, 1);
+  --colour-palette-light-mode-success: rgba(5, 150, 105, 1);
+  --colour-palette-light-mode-active-status: rgba(52, 211, 153, 1);
+  --colour-palette-light-mode-success-on-dark: rgba(110, 231, 183, 1);
+  --colour-palette-light-mode-success-surface: rgba(236, 253, 245, 1);
+  --colour-palette-light-mode-coral-maker: rgba(252, 85, 99, 1);
+  --colour-palette-light-mode-rose-highlight: rgba(255, 218, 217, 1);
+  --colour-palette-light-mode-warning-action: rgba(217, 119, 6, 1);
+  --colour-palette-light-mode-warning-tint: rgba(245, 158, 11, 0.1);
+
+  /* Dark Mode Palette */
+  --colour-palette-dark-mode-primary-navy-duplicate: rgba(11, 37, 69, 1);
+  --colour-palette-dark-mode-deep-navy-duplicate: rgba(0, 16, 38, 1);
+  --colour-palette-dark-mode-crimson-duplicate: rgba(255, 135, 152, 1);
+  --colour-palette-dark-mode-light-blue-duplicate: rgba(177, 199, 240, 1);
+  --colour-palette-dark-mode-page-background-duplicate: rgba(8, 15, 28, 1);
+  --colour-palette-dark-mode-card-surface-duplicate: rgba(16, 29, 48, 1);
+  --colour-palette-dark-mode-soft-surface-duplicate: rgba(22, 37, 59, 1);
+  --colour-palette-dark-mode-secondary-surface-duplicate: rgba(28, 48, 75, 1);
+  --colour-palette-dark-mode-action-surface-duplicate: rgba(40, 67, 100, 1);
+  --colour-palette-dark-mode-primary-text-duplicate: rgba(243, 246, 252, 1);
+  --colour-palette-dark-mode-secondary-text-duplicate: rgba(184, 195, 212, 1);
+  --colour-palette-dark-mode-muted-blue-duplicate: rgba(145, 168, 204, 1);
+  --colour-palette-dark-mode-success-duplicate: rgba(52, 211, 153, 1);
+  --colour-palette-dark-mode-active-status-duplicate: rgba(52, 211, 153, 1);
+  --colour-palette-dark-mode-success-on-dark-duplicate: rgba(110, 231, 135, 1);
+  --colour-palette-dark-mode-success-surface-duplicate: rgba(18, 56, 46, 1);
+  --colour-palette-dark-mode-coral-maker-duplicate: rgba(252, 85, 99, 1);
+  --colour-palette-dark-mode-rose-highlight-duplicate: rgba(255, 218, 217, 1);
+  --colour-palette-dark-mode-warning-action-duplicate: rgba(251, 191, 36, 1);
+  --colour-palette-dark-mode-warning-tint-duplicate: rgba(245, 158, 11, 0.1);
+
+  /* Semantic Theme Tokens — Dark Mode (Default) */
+  --bg-page: var(--colour-palette-dark-mode-page-background-duplicate);
+  --bg-nav: var(--colour-palette-dark-mode-primary-navy-duplicate);
+  --bg-subnav: rgba(11, 21, 40, 0.95);
+  --bg-card: var(--colour-palette-dark-mode-card-surface-duplicate);
+  --bg-card-elevated: #0b1528;
+  --bg-soft: var(--colour-palette-dark-mode-soft-surface-duplicate);
+  --bg-secondary: var(--colour-palette-dark-mode-secondary-surface-duplicate);
+  --bg-action: var(--colour-palette-dark-mode-action-surface-duplicate);
+  --bg-deep: var(--colour-palette-dark-mode-deep-navy-duplicate);
+  --bg-footer: var(--colour-palette-dark-mode-card-surface-duplicate);
+
+  --text-primary: var(--colour-palette-dark-mode-primary-text-duplicate);
+  --text-secondary: var(--colour-palette-dark-mode-secondary-text-duplicate);
+  --text-muted: var(--colour-palette-dark-mode-muted-blue-duplicate);
+  --text-light-blue: var(--colour-palette-dark-mode-light-blue-duplicate);
+  --text-link: #60a5fa;
+
+  --accent-navy: var(--colour-palette-dark-mode-primary-navy-duplicate);
+  --accent-crimson: var(--colour-palette-dark-mode-crimson-duplicate);
+  --accent-crimson-solid: var(--colour-palette-light-mode-crimson);
+  --accent-coral: var(--colour-palette-dark-mode-coral-maker-duplicate);
+  --accent-rose: var(--colour-palette-dark-mode-rose-highlight-duplicate);
+
+  --status-success: var(--colour-palette-dark-mode-success-duplicate);
+  --status-success-text: var(--colour-palette-dark-mode-success-on-dark-duplicate);
+  --status-success-bg: var(--colour-palette-dark-mode-success-surface-duplicate);
+  --status-info-bg: rgba(59, 130, 246, 0.16);
+  --status-info-text: #93c5fd;
+
+  --duty-bg: rgba(120, 24, 48, 0.35);
+  --duty-border: rgba(255, 135, 152, 0.25);
+  --duty-icon-bg: rgba(245, 158, 11, 0.18);
+  --duty-title: #f8fafc;
+  --duty-text: #e2e8f0;
+  --duty-btn-bg: #111e36;
+  --duty-btn-text: #93c5fd;
+
+  --border-subtle: rgba(145, 168, 204, 0.14);
+  --border-card: rgba(51, 65, 85, 0.55);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+
+  /* Shared SVG Icon Masks */
+  --mask-dorm: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" fill="none"%3E%3Cpath fill="%23000" d="M0 21V4.667h4.667V0h11.666v9.333H21V21h-9.333v-4.667H9.333V21zm2.333-2.333h2.334v-2.334H2.333zm0-4.667h2.334v-2.333H2.333zm0-4.667h2.334V7H2.333zM7 14h2.333v-2.333H7zm0-4.667h2.333V7H7zm0-4.666h2.333V2.333H7zM11.667 14H14v-2.333h-2.333zm0-4.667H14V7h-2.333zm0-4.666H14V2.333h-2.333zm4.666 14h2.334v-2.334h-2.334zm0-4.667h2.334v-2.333h-2.334z"/%3E%3C/svg%3E');
+  --mask-house: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14" fill="none"%3E%3Cpath fill="%23000" d="M0 13.333V5l5-5 5 5v8.333zm1.667-1.666h2.5v-2.5h1.666v2.5h2.5v-5.98L5 2.355 1.667 5.688zm2.5-4.167V5.833h1.666V7.5zm7.5 5.833v-9.02L7.354 0h2.354l3.625 3.625v9.708zm3.333 0V2.938L12.063 0h2.354l2.25 2.25v11.083z"/%3E%3C/svg%3E');
+  --mask-calendar: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" fill="none"%3E%3Cpath d="M4.667.5v3.334M11.333.5v3.334M.5 7.167h15M2.167 2.167h11.666c.92 0 1.667.746 1.667 1.667v11.667c0 .92-.746 1.667-1.667 1.667H2.167A1.667 1.667 0 0 1 .5 15.501V3.834c0-.92.746-1.667 1.667-1.667Z" stroke="%23000" stroke-width="1.5" stroke-linecap="round"/%3E%3C/svg%3E');
+  --mask-search: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"%3E%3Ccircle cx="11" cy="11" r="7" stroke="%23000" stroke-width="2"/%3E%3Cpath d="m20 20-3.5-3.5" stroke="%23000" stroke-width="2" stroke-linecap="round"/%3E%3C/svg%3E');
+  --mask-bell: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"%3E%3Cpath d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+  --mask-user: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"%3E%3Ccircle cx="12" cy="8" r="4" stroke="%23000" stroke-width="2"/%3E%3Cpath d="M4 20c0-3.314 3.582-6 8-6s8 2.686 8 6" stroke="%23000" stroke-width="2" stroke-linecap="round"/%3E%3C/svg%3E');
+  --mask-key: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none"%3E%3Cpath d="M1 13.38a1.67 1.67 0 0 0-.5 1.18v1.81c0 .46.37.83.83.83h2.5c.46 0 .83-.37.83-.83v-.83c0-.46.38-.84.84-.84h.83c.46 0 .83-.37.83-.83v-.83c0-.46.38-.84.84-.84h.14c.44 0 .87-.17 1.18-.49l.68-.68a5.67 5.67 0 1 0-3.33-3.33L1 13.38Z" stroke="%23000" stroke-width="1.5" stroke-linecap="round"/%3E%3Ccircle cx="12.58" cy="5.12" r=".75" fill="%23000"/%3E%3C/svg%3E');
+  --mask-check: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"%3E%3Ccircle cx="12" cy="12" r="9" stroke="%23000" stroke-width="2"/%3E%3Cpath d="m8.5 12.5 2.3 2.3 4.7-4.8" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+  --mask-broom: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 22" fill="none"%3E%3Cpath fill="%23000" d="M0 22v-7c0-1.383.488-2.562 1.463-3.537A4.82 4.82 0 0 1 5 10h1V2c0-.55.196-1.021.588-1.412A1.926 1.926 0 0 1 8 0h2c.55 0 1.021.196 1.413.588.391.391.587.862.587 1.412v8h1c1.383 0 2.563.488 3.538 1.463A4.82 4.82 0 0 1 18 15v7H0Zm2-2h2v-3c0-.283.096-.521.288-.712A.965.965 0 0 1 5 16c.283 0 .521.096.713.288.191.191.287.429.287.712v3h2v-3c0-.283.096-.521.288-.712A.965.965 0 0 1 9 16c.283 0 .521.096.713.288.191.191.287.429.287.712v3h2v-3c0-.283.096-.521.288-.712A.965.965 0 0 1 13 16c.283 0 .521.096.713.288.191.191.287.429.287.712v3h2v-5c0-.833-.292-1.542-.875-2.125A2.893 2.893 0 0 0 13 12H5c-.833 0-1.542.292-2.125.875A2.893 2.893 0 0 0 2 15v5Zm8-10V2H8v8h2Z"/%3E%3C/svg%3E');
+  --mask-plus: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"%3E%3Cpath d="M1 6h10M6 1v10" stroke="%23000" stroke-width="1.8" stroke-linecap="round"/%3E%3C/svg%3E');
+  --mask-arrow-right: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"%3E%3Cpath fill="%23000" d="M9.131 6.75H0v-1.5h9.131l-4.2-4.2L6 0l6 6-6 6-1.069-1.05z"/%3E%3C/svg%3E');
+  --mask-chevron-right: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"%3E%3Cpath d="m4.5 2.5 3.5 3.5-3.5 3.5" stroke="%23000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+  --mask-dropdown: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" fill="none"%3E%3Cpath fill="%23000" d="M4.5 5.55 0 1.05 1.05 0 4.5 3.45 7.95 0 9 1.05z"/%3E%3C/svg%3E');
+  --mask-telephone-ring: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none"%3E%3Cpath fill="%23000" d="M13.333 7.5q0-2.437-1.698-4.135T7.5 1.667V0q1.563 0 2.927.594t2.375 1.604a7.6 7.6 0 0 1 1.604 2.375Q15 5.937 15 7.5zM10 7.5a2.4 2.4 0 0 0-.73-1.77A2.4 2.4 0 0 0 7.5 5V3.333q1.729 0 2.948 1.22Q11.666 5.77 11.667 7.5zm4.125 7.5q-2.604 0-5.146-1.135t-4.625-3.22Q2.27 8.564 1.135 6.022T0 .875Q0 .5.25.25A.85.85 0 0 1 .875 0H4.25q.292 0 .52.198a.76.76 0 0 1 .272.469l.541 2.916q.042.334-.02.563a.9.9 0 0 1-.23.396l-2.02 2.041q.416.77.99 1.49.572.719 1.26 1.385.645.645 1.354 1.198.708.552 1.5 1.01l1.958-1.958q.187-.187.49-.28.302-.094.593-.053l2.875.583a.96.96 0 0 1 .48.302.73.73 0 0 1 .187.49v3.375q0 .375-.25.625a.85.85 0 0 1-.625.25"/%3E%3C/svg%3E');
+  --mask-announcement: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"%3E%3Cpath d="M18 8a3 3 0 0 1 0 6M4 10v4a1 1 0 0 0 1 1h2l4 3V6L7 9H5a1 1 0 0 0-1 1Zm10-5 5-2v18l-5-2" stroke="%23000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+  --mask-document: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 18" fill="none"%3E%3Cpath d="M8.833.5H2.167A1.667 1.667 0 0 0 .5 2.167v13.334c0 .92.746 1.667 1.667 1.667h10c.92 0 1.666-.746 1.666-1.667V5.5L8.833.5Zm0 0v4.167c0 .46.373.833.833.833h4.167M5.5 6.334H3.833M10.5 9.667H3.833M10.5 13H3.833" stroke="%23000" stroke-width="1.4" stroke-linecap="round"/%3E%3C/svg%3E');
+  --mask-wallet: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16" fill="none"%3E%3Cpath d="M13.833 3.833V1.333a.833.833 0 0 0-.833-.833H2.167A1.667 1.667 0 0 0 .5 2.167m13.333 1.666H2.167A1.667 1.667 0 0 1 .5 2.167m13.333 1.666h.834c.46 0 .833.373.833.834V8M.5 2.167v11.666c0 .92.746 1.667 1.667 1.667h12.5c.46 0 .833-.373.833-.833v-3.334M15.5 8H13a1.667 1.667 0 1 0 0 3.333h2.5m0-3.333c.46 0 .833.373.833.833v1.667a.833.833 0 0 1-.833.833" stroke="%23000" stroke-width="1.4" stroke-linecap="round"/%3E%3C/svg%3E');
+  --mask-menu: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 13" fill="none"%3E%3Cpath d="M.5.5h13.332M.5 6.334h13.332M.5 12.168h13.332" stroke="%23000" stroke-width="1.5" stroke-linecap="round"/%3E%3C/svg%3E');
+  --mask-washing-machine: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" fill="none"%3E%3Cpath d="M.5 3.834h15M2.167.5h11.666c.92 0 1.667.746 1.667 1.667v13.334c0 .92-.746 1.667-1.667 1.667H2.167A1.667 1.667 0 0 1 .5 15.501V2.167C.5 1.246 1.246.5 2.167.5ZM8 13.834a4.167 4.167 0 1 0 0-8.334 4.167 4.167 0 0 0 0 8.334Z" stroke="%23000" stroke-width="1.4" stroke-linecap="round"/%3E%3C/svg%3E');
+  --mask-dice: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none"%3E%3Cpath d="m13.767 10.497 2.916-2.917a1.83 1.83 0 0 0 0-2.5L12.517.98a1.83 1.83 0 0 0-2.5 0L7.167 3.83m-5 3.333h6.666c.92 0 1.667.746 1.667 1.667v6.667c0 .92-.746 1.666-1.667 1.666H2.167A1.667 1.667 0 0 1 .5 15.497V8.83c0-.92.746-1.667 1.667-1.667Z" stroke="%23000" stroke-width="1.4" stroke-linecap="round"/%3E%3Ccircle cx="3.83" cy="13.83" r=".9" fill="%23000"/%3E%3Ccircle cx="7.17" cy="10.5" r=".9" fill="%23000"/%3E%3C/svg%3E');
+  --mask-user-plus: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"%3E%3Cpath d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M8.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM20 8v6M23 11h-6" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+  --mask-id: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" fill="none"%3E%3Cpath fill="%23000" d="M1.667 16.667q-.688 0-1.177-.49A1.6 1.6 0 0 1 0 15V5.833q0-.687.49-1.177.489-.49 1.177-.49h4.166v-2.5q0-.687.49-1.176Q6.813 0 7.5 0h1.667q.687 0 1.177.49.49.489.49 1.177v2.5H15q.687 0 1.177.49.49.489.49 1.176V15q0 .687-.49 1.177t-1.177.49zm0-1.667H15V5.833h-4.167q0 .688-.49 1.177-.489.49-1.176.49H7.5q-.687 0-1.177-.49a1.6 1.6 0 0 1-.49-1.177H1.667zm1.666-1.667h5v-.375q0-.354-.198-.656a1.3 1.3 0 0 0-.552-.469 4.3 4.3 0 0 0-.843-.28 4.2 4.2 0 0 0-.907-.095q-.48 0-.906.094a4.3 4.3 0 0 0-.844.281q-.354.167-.552.47-.198.301-.198.655zM10 12.083h3.333v-1.25H10zm-4.167-1.25q.522 0 .886-.364t.364-.886q0-.52-.364-.885a1.2 1.2 0 0 0-.886-.365q-.52 0-.885.365a1.2 1.2 0 0 0-.365.885q0 .522.365.886t.885.364M10 9.583h3.333v-1.25H10zm-2.5-3.75h1.667V1.667H7.5z"/%3E%3C/svg%3E');
+  --mask-lock: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 18" fill="none"%3E%3Cpath fill="%23000" d="M1.667 17.5q-.688 0-1.177-.49A1.6 1.6 0 0 1 0 15.833V7.5q0-.687.49-1.177.489-.49 1.177-.49H2.5V4.167q0-1.73 1.219-2.948Q4.937-.001 6.667 0q1.728 0 2.948 1.219 1.218 1.218 1.218 2.948v1.666h.834q.687 0 1.177.49t.49 1.177v8.333q0 .688-.49 1.177t-1.177.49zm0-1.667h10V7.5h-10zm5-2.5q.687 0 1.177-.49.49-.489.49-1.176 0-.688-.49-1.177A1.6 1.6 0 0 0 6.667 10q-.688 0-1.177.49-.49.489-.49 1.177 0 .687.49 1.177.489.49 1.177.49m-2.5-7.5h5V4.166a2.4 2.4 0 0 0-.73-1.771 2.4 2.4 0 0 0-1.77-.73 2.4 2.4 0 0 0-1.771.73 2.4 2.4 0 0 0-.73 1.77z"/%3E%3C/svg%3E');
+  --mask-eye: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 13" fill="none"%3E%3Cpath fill="%23000" d="M9.167 10q1.562 0 2.656-1.094 1.095-1.093 1.094-2.656t-1.094-2.656Q10.728 2.5 9.167 2.5T6.51 3.594Q5.417 4.687 5.417 6.25T6.51 8.906Q7.605 10.001 9.167 10m0-1.5a2.17 2.17 0 0 1-1.594-.656 2.17 2.17 0 0 1-.656-1.594q0-.937.656-1.594A2.17 2.17 0 0 1 9.167 4a2.17 2.17 0 0 1 1.593.656q.657.657.657 1.594a2.17 2.17 0 0 1-.657 1.594 2.17 2.17 0 0 1-1.593.656m0 4q-3.042 0-5.542-1.698T0 6.25q1.125-2.854 3.625-4.552T9.167 0t5.541 1.698 3.625 4.552q-1.125 2.854-3.625 4.552T9.167 12.5m0-1.667q2.354 0 4.323-1.24A8.14 8.14 0 0 0 16.5 6.25a8.14 8.14 0 0 0-3.01-3.344 7.95 7.95 0 0 0-4.323-1.24q-2.354 0-4.323 1.24a8.14 8.14 0 0 0-3.01 3.344 8.14 8.14 0 0 0 3.01 3.344 7.95 7.95 0 0 0 4.323 1.24"/%3E%3C/svg%3E');
+  --mask-arrow-bracket: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none"%3E%3Cpath fill="%23000" d="M7.5 15v-1.667h5.833V1.667H7.5V0h5.833q.688 0 1.177.49.49.489.49 1.177v11.666q0 .688-.49 1.177-.489.49-1.177.49zm-1.667-3.333-1.146-1.209 2.125-2.125H0V6.667h6.813L4.688 4.542l1.145-1.209L10 7.5z"/%3E%3C/svg%3E');
+  --mask-shield: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 15" fill="none"%3E%3Cpath fill="%23000" d="M5.213 10.163 9.45 5.924 8.381 4.856 5.213 8.025 3.638 6.45l-1.07 1.069zM6 15q-2.606-.656-4.303-2.99T0 6.824V2.25L6 0l6 2.25v4.575q0 2.85-1.697 5.184T6 15m0-1.575q1.95-.62 3.225-2.475A7.1 7.1 0 0 0 10.5 6.825V3.281L6 1.594 1.5 3.28v3.544q0 2.27 1.275 4.125Q4.05 12.807 6 13.425"/%3E%3C/svg%3E');
+  --mask-slonce: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23000" stroke-width="2" stroke-linecap="round"%3E%3Ccircle cx="12" cy="12" r="5"/%3E%3Cpath d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/%3E%3C/svg%3E');
+  --mask-ksiezyc: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000"%3E%3Cpath d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/%3E%3C/svg%3E');
+}
+
+/* Semantic Theme Tokens — Light Mode */
+[data-theme="light"],
+body.light-mode {
+  --bg-page: var(--colour-palette-light-mode-page-background);
+  --bg-nav: var(--colour-palette-light-mode-primary-navy);
+  --bg-subnav: var(--colour-palette-light-mode-deep-navy);
+  --bg-card: var(--colour-palette-light-mode-card-surface);
+  --bg-card-elevated: var(--colour-palette-light-mode-card-surface);
+  --bg-soft: var(--colour-palette-light-mode-soft-surface);
+  --bg-secondary: var(--colour-palette-light-mode-secondary-surface);
+  --bg-action: var(--colour-palette-light-mode-action-surface);
+  --bg-deep: var(--colour-palette-light-mode-deep-navy);
+  --bg-footer: var(--colour-palette-light-mode-card-surface);
+
+  --text-primary: var(--colour-palette-light-mode-primary-text);
+  --text-secondary: var(--colour-palette-light-mode-secondary-text);
+  --text-muted: var(--colour-palette-light-mode-muted-blue);
+  --text-light-blue: var(--colour-palette-light-mode-primary-navy);
+  --text-link: #1d4ed8;
+
+  --accent-navy: var(--colour-palette-light-mode-primary-navy);
+  --accent-crimson: var(--colour-palette-light-mode-crimson);
+  --accent-crimson-solid: var(--colour-palette-light-mode-crimson);
+  --accent-coral: var(--colour-palette-light-mode-coral-maker);
+  --accent-rose: var(--colour-palette-light-mode-rose-highlight);
+
+  --status-success: var(--colour-palette-light-mode-success);
+  --status-success-text: var(--colour-palette-light-mode-success);
+  --status-success-bg: var(--colour-palette-light-mode-success-surface);
+  --status-info-bg: var(--colour-palette-light-mode-secondary-surface);
+  --status-info-text: #1d4ed8;
+
+  --duty-bg: #fef7e6;
+  --duty-border: rgba(217, 119, 6, 0.25);
+  --duty-icon-bg: rgba(245, 158, 11, 0.14);
+  --duty-title: var(--colour-palette-light-mode-primary-text);
+  --duty-text: var(--colour-palette-light-mode-secondary-text);
+  --duty-btn-bg: #ffffff;
+  --duty-btn-text: var(--colour-palette-light-mode-primary-text);
+
+  --border-subtle: rgba(11, 37, 69, 0.08);
+  --border-card: rgba(11, 37, 69, 0.08);
+  --shadow-card: 0 4px 16px rgba(13, 28, 46, 0.06);
+}
